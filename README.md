@@ -8,7 +8,10 @@ To implement  Encoder 8 To 3 in Dataflow Modelling using verilog and validating 
 
 **THEORY**
 
-**Encoder 8 To 3**
+**Encoder 8 To 3**<br>
+![Screenshot 2024-12-08 213854](https://github.com/user-attachments/assets/83fca21d-9f70-41b5-8133-502dd19d4ea2)
+
+
 
 The 8 to 3 line Encoder is also known as Octal to Binary Encoder. In 8 to 3 line encoder, there is a total of eight inputs, i.e., D0, D1, D2, D3, D4, D5, D6, and D7 and three outputs, i.e., A0, A1, and A2. In 8-input lines, one input-line is set to true at a time to get the respective binary code in the output side. Below are the block diagram and the truth table of the 8 to 3 line encoder.
 
@@ -34,22 +37,39 @@ Logical circuit of the above expressions is given below:
 
 Figure 02  Encoder 8 * 3
 
-**Procedure**
+**Procedure**<br>
+Type the program in Quartus software.<br>
+Compile and run the program.<br>
+Generate the RTL schematic and save the logic diagram.<br>
+Create nodes for inputs and outputs to generate the timing diagram.<br>
+For different input combinations generate the timing diagram.<br>
 
 /* write all the steps invloved */
 
-**PROGRAM**
+**PROGRAM**<br>
+module exp5(din,a,b,c);<br>
+ input [0:7] din;<br>
+ output a,b,c;<br>
+ assign a=(din[4]| din [5]| din[6 ]| din[7]);<br>
+ assign b=(din[2]| din[3]| din[6]| din[7]);<br>
+ assign c=(din[1]| din[3]| din[5]| din[7]);<br>
+ endmodule<br>
 
 /* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
+Developed by: Lokeshh.M RegisterNumber:24900227
 */
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
+![Screenshot 2024-12-08 213941](https://github.com/user-attachments/assets/294f0fff-00ba-40d0-94ea-34b77e17873b)
+
 
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
+![Screenshot 2024-12-08 214003](https://github.com/user-attachments/assets/d61f7cd9-c0d0-4f69-9201-69c00ea74348)
+
 
 **RESULTS**
+ 8:3 encoder implemented successfully truth table has verified.
 
 
 
